@@ -29,7 +29,7 @@ do
     
     _name="$(yq r $fname metadata.name)"
     _namespace="$(yq r $fname metadata.namespace)"
-    if [ _namespace == "null" ]
+    if [ "$_namespace" == "null" ]
     then
       _namespace="-"
     else
